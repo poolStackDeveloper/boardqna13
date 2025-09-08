@@ -1,3 +1,9 @@
+// [DB table(dbTableBoard) - board - column]
+// 1. userId  
+// 2. title   
+// 3. content 
+// 4. regiDate
+
 //화면 초기설정
 function initLayout(){
     const request = new URLSearchParams(location.search)
@@ -5,14 +11,7 @@ function initLayout(){
     if (appKind != "new") return;
     
     const title = document.querySelector("h1");
-    title.innerHTML = "Q & A - 신규등록";
-
-    //Get Login User info
-    const loginData = JSON.parse(localStorage.getItem('loginUserData'));
-    if (loginData) {
-        inputUserId.value = `${loginData.userId}`;
-        inputUserId.setAttribute('disabled', 'true'); //아이디는 더 이상 게시물 등록 항목이 아님
-    }
+    title.innerHTML = "Q & A - 신규등록"; //왜 innerTEXT는 안되지?
 
     //수정버튼 숨김처리
     const btnUpdate = document.querySelector("button[value='update']");

@@ -48,6 +48,7 @@
 #header > .button-area > .paging {
     display: flex; /* 버튼을 가로로 정렬 */    
     gap: 8px; /* 버튼 사이의 간격 */
+	
 }
 
 #header > .button-area > .btn-create {
@@ -58,11 +59,12 @@
     background-color: #110158;
     font-weight: 500;
     color: white;
+    
 }
 .user-info {
-    position: absolute;
+    position:absolute;
     top: 0px;
-    left: 0px;
-    font-size: 14px;
-    margin: 10px 10px;
+    right: 0px;
+    font-size: 12px;
+    margin-right: 5px;
 }
