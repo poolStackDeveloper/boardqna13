@@ -1,10 +1,3 @@
-// [DB table(dbTableBoard) - board - column]
-// 1. userId  
-// 2. title   
-// 3. content 
-// 4. regiDate
-
-
 function initLayout(){
     const request = new URLSearchParams(location.search);
     const appKind = request.get("appKind");
