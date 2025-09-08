@@ -12,6 +12,10 @@ function initLayout(){
     if (loginData) {
         inputUserId.value = `${loginData.userId}`;
         inputUserId.setAttribute('disabled', 'true'); //아이디는 더 이상 게시물 등록 항목이 아님
+    }else{
+        alert("로그인 정보가 없습니다.");
+        location.href="./index.html";
+        return;
     }
 
     //수정버튼 숨김처리
