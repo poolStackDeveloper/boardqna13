@@ -62,20 +62,13 @@
     color: white;
     
 }
-/*
-.page-btn {
-    padding: 10px 15px;
-    margin: 0 5px;
-    border: 1px solid #373737;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #373737;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* 0.3초간 부드럽게 변화 */
-}
 
-.page-btn.active, .page-btn:hover {
-    background-color: #373737;
-    color: #fff;
+/* 버튼 기본CSS */
+button {
+    width: 100%;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
 }
-*/
