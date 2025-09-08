@@ -40,15 +40,28 @@ function handleLogin(userId, password) {
     const isValidUser = users.find(user => user.userId === userId && user.password === password);
 
     if (isValidUser) {
+        // 한국 시간으로 현재 시각을 포맷팅
+        const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false,
+            timeZone: 'Asia/Seoul'
+        });
+        const formattedDate = kstFormatter.format(new Date());
+
         // 로그인 성공 시 로컬 스토리지에 로그인 정보 저장
         const loginData = {
             userId: isValidUser.userId,
-            loggedInAt: new Date().toISOString()
+            loggedInAt: formattedDate // 한국 시간으로 포맷된 날짜/시간
         };
-        localStorage.setItem(LOGIN_DATA_KEY, JSON.stringify(loginData)); //현재 로그인 한 유저
+        localStorage.setItem(LOGIN_DATA_KEY, JSON.stringify(loginData));
 
         alert('로그인 성공!');
-        window.location.href = './list.html';
+        window.location.href = 'list.html';
     } else {
         alert('아이디 또는 비밀번호가 올바르지 않습니다.');
     }
