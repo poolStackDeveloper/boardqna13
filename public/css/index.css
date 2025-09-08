@@ -1,0 +1,81 @@
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.main {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: #555;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+button {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.75rem;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* 부드럽게 스윽 바뀌는 효과 */
+}
+
+#submit-btn {
+    background-color: #110158;
+    color: #fff;
+}
+
+#submit-btn:hover {
+    transform: translateY(-1px);
+}
+
+#toggle-btn {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+#toggle-btn:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+}
