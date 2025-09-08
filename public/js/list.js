@@ -81,15 +81,11 @@ function displayLoggedInUser() {
     const userInfoDiv = document.querySelector('.user-info');
 
     if (loginData) {
-        userInfoDiv.innerHTML = `<p>${loginData.userId}님, 환영합니다!</p><p>최근 로그인 : ${loginData.loggedInAt}</p>`;
+        userInfoDiv.innerText = `Logged User: ${loginData.userId} / Logged In At: ${loginData.loggedInAt}`;
     } else {
-        //userInfoDiv.innerText = '로그인 정보가 없습니다.';
-        //2025.09.08 예외처리 : 로그인정보가 없으면 로그인 페이지로 돌려보냄
-        alert("로그인 정보가 없습니다.");
-        location.href="./index.html";
-        return;
+        userInfoDiv.innerText = '로그인 정보가 없습니다.';
     }
 }
 displayLoggedInUser(); //현재 로그인한 사용자 정보 표시
-createPagination(); //페이징 
+createPagination() ; //페이징 
 getList(1); //최초 접근 시 첫페이지 호출
