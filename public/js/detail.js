@@ -4,11 +4,6 @@
 // 3. content 
 // 4. regiDate
 
-//상세화면 전역변수 - create.js, update.js 사용가능
-const inputUserId = document.querySelector("input[name='userId']");
-const inputTitle = document.querySelector("input[name='title']");
-const inputContent = document.querySelector("textarea[name='content']");
-const dbTableBoard = JSON.parse(localStorage.getItem("dbTableBoard")) || [];
 
 function initLayout(){
     const request = new URLSearchParams(location.search);
