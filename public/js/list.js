@@ -4,39 +4,6 @@
 // 3. content 
 // 4. regiDate
 
-//List화면에서 필요한 기능
-//1. List 불러오기
-//2. Create 화면으로 이동
-
-// 이중 For문 사용 - 주석처리
-// function getList(){
-//     const dbTableBoard = JSON.parse(localStorage.getItem("dbTableBoard")) || [];
-//     const tbody = document.querySelector('tbody');
-//     dbTableBoard.forEach((value, i) => {
-//         const tr = document.createElement("tr");
-//         const rowValues = [
-//             i, //data-index 역할
-//             dbTableBoard[i].title,
-//             dbTableBoard[i].userId,
-//             // dbTableBoard[i].content, //상세내용은 상세페이지에서 textarea로 확인하겠습니다.
-//             dbTableBoard[i].regiDate
-//         ]
-//         rowValues.forEach((rowValue,j) => {
-//             const td = document.createElement("td");
-//             if(j === 1){ //제목
-//                 const aTag = document.createElement("a");
-//                 aTag.innerText = rowValue;
-//                 aTag.setAttribute("href",`./view.html?appKind=detail&userId=${value.userId}&index=${i}`);
-//                 td.appendChild(aTag);
-//             }else{
-//                 td.innerText = rowValue;
-//             }
-//             tr.appendChild(td);
-//         });
-//         tbody.appendChild(tr);
-//     });
-// }
-
 function createPagination() {
     const dbTableBoard = JSON.parse(localStorage.getItem("dbTableBoard")) || [];
     const totalPages = Math.ceil(dbTableBoard.length / 10);
@@ -108,5 +75,17 @@ function goCreate(){
     location.href="./view.html?appKind=new";
 };
 
+// 현재 로그인한 사용자 정보 표시
+function displayLoggedInUser() {
+    const loginData = JSON.parse(localStorage.getItem('loginUserData'));
+    const userInfoDiv = document.querySelector('.user-info');
+
+    if (loginData) {
+        userInfoDiv.innerText = `Logged User: ${loginData.userId} / Logged In At: ${loginData.loggedInAt}`;
+    } else {
+        userInfoDiv.innerText = '로그인 정보가 없습니다.';
+    }
+}
+displayLoggedInUser(); //현재 로그인한 사용자 정보 표시
 createPagination() ; //페이징 
 getList(1); //최초 접근 시 첫페이지 호출
