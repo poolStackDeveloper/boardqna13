@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6강의실 Q & A</title>
+    <link rel="stylesheet" href="./public/css/common.css">
+    <link rel="stylesheet" href="./public/css/view.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Q & A - 신규등록</h1>
+        <form action="#" name= "formCreate" class="formCreate">
+            <div class="grpInputRow">
+                <label class="lblHeader" for="userId">사용자 ID</label>
+                <input class="inputField" placeholder="아이디 입력" name="userId" type="text">
+            </div>
+            <div class="grpInputRow">
+                <label class="lblHeader" for="title">질문 제목</label>
+                <input class="inputField" placeholder="제목 입력" name="title" type="text">
+            </div>
+            <div class="grpInputRow">
+                <label class="lblHeader" for="content">상세 내용</label>
+                <textarea class="inputTxtArea" name="content" placeholder="내용 입력"></textarea>
+            </div>
+            <div class="btnArea">
+                <div class="btnArea-left">
+                    <button class="btnGoBack" onclick="history.back();" name="goBack" type="button" >뒤로가기</button> 
+                    <button class="btnUpdate" name="updateMode" type="button" value="updateMode">수정모드</button> 
+                    <button class="btnDelete" name="delete" type="button" value="del">삭제</button> 
+                </div>
+                <div class="btnArea-right">
+                    <button class="btnSave" type="submit" value="save">등록</button>    
+                    <button class="btnSave" type="button" value="update">변경내용 저장</button>    
+                </div>
+            </div>
+            
+        </form>
+    </div>
+    <script src="./public/js/delete.js"></script>
+    <script src="./public/js/update.js"></script>
+    <script src="./public/js/create.js"></script>
+    <script src="./public/js/detail.js"></script>
+    
+</body>
+
+</html>

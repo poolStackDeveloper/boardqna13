@@ -1,0 +1,110 @@
+#header{
+    display: flex;
+    flex-direction:column;
+    justify-content: center; 
+    height: 100vh; 
+    margin: auto;   
+    max-width: 1000px;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+#header > h1{
+    padding: 20px 0;
+    text-align: center;
+}
+
+#header > .formCreate{
+    min-width: 500px;
+
+    
+}
+
+#header > .formCreate > .grpInputRow {
+    margin : 3px 0;
+    display: flex; 
+    gap: 3px;
+}
+
+#header > .formCreate > .btnArea{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding-top: 30px;
+}
+
+#header > .formCreate > .btnArea-left{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+     
+}
+#header > .formCreate > .btnArea-right{
+    /* display: flex; */
+    /* align-items: flex-end; */
+    /* margin-left: auto; */
+    width: 50%;
+    padding-top: 30px; 
+    
+    
+}
+
+.btnArea > .btnArea-left > .btnGoBack{
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background-color: #393939;
+    font-weight: 500;
+    color: white;
+}
+
+/* 업데이트 모드 */
+.btnArea > .btnArea-left > .btnUpdate{
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background-color: #400000;
+    font-weight: 500;
+    color: white;
+}
+
+/* 삭제버튼 */
+.btnArea > .btnArea-left > .btnDelete{
+    /* display: inline; */
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background-color: #d20000;
+    font-weight: 500;
+    color: white;
+}
+
+/* 저장버튼st */
+.btnArea > .btnArea-right > .btnSave{
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background-color: #110158;
+    font-weight: 500;
+    color: white;
+}
+
+.formCreate > .grpInputRow > .lblHeader {
+    color : white;
+    font-weight: 500;
+    text-align: center;
+    width : 150px;
+    background-color: #313131;
+}
+
+.formCreate > .grpInputRow > .inputField {
+    display: inline-block;
+    height: 25px;
+    width : 100%;
+}
+
+.formCreate > .grpInputRow > .inputTxtArea {
+    height: 150px;
+    width : 100%;
+}
+

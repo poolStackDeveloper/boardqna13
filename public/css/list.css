@@ -1,0 +1,81 @@
+#header{
+    display: flex;
+    flex-direction:column;
+    justify-content: center; 
+    height: 100vh; 
+    max-width: 1000px;
+    min-width: 500px;
+    margin: auto;    
+}
+
+#header > h1{
+    padding: 20px 0;
+    text-align: center;
+}
+
+#header > .header-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    border: 1px solid #474747
+}
+
+#header > .header-table > thead {
+    background-color: #313131;
+    height: 30px;
+    color: white;
+    padding: 12px 15px;
+    
+}
+
+#header > .header-table > tbody > tr {
+    height: 50px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#header > .header-table > tbody > tr:hover {
+    background-color: #edffe6;
+}
+
+#header > .button-area {
+    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding-top: 30px;  
+}
+
+#header > .button-area > .paging {
+    display: flex; /* 버튼을 가로로 정렬 */    
+    gap: 8px; /* 버튼 사이의 간격 */
+	
+}
+
+#header > .button-area > .btn-create {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background-color: #110158;
+    font-weight: 500;
+    color: white;
+    
+}
+/*
+.page-btn {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid #373737;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #373737;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* 0.3초간 부드럽게 변화 */
+}
+
+.page-btn.active, .page-btn:hover {
+    background-color: #373737;
+    color: #fff;
+}
+*/
