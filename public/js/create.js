@@ -21,6 +21,9 @@ function initLayout(){
     btnUpdateMode.style.display = 'none';
     const btnDelete = document.querySelector("button[value='del']");
     btnDelete.style.display = 'none';
+    // 댓글 영역 숨김처리
+    const mentArea = document.querySelector(".mentArea");
+    mentArea.style.display = `none`;
 }
 
 //오늘날짜를 return 하는 함수
