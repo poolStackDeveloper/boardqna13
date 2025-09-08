@@ -7,7 +7,7 @@ function initLayout(){
     const title = document.querySelector("h1");
     title.innerHTML = "Q & A - 신규등록";
 
-    //Get Login User info
+    // 250908 Get Login User info
     const loginData = JSON.parse(localStorage.getItem('loginUserData'));
     if (loginData) {
         inputUserId.value = `${loginData.userId}`;
