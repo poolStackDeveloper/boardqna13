@@ -4,39 +4,6 @@
 // 3. content 
 // 4. regiDate
 
-//List화면에서 필요한 기능
-//1. List 불러오기
-//2. Create 화면으로 이동
-
-// 이중 For문 사용 - 주석처리
-// function getList(){
-//     const dbTableBoard = JSON.parse(localStorage.getItem("dbTableBoard")) || [];
-//     const tbody = document.querySelector('tbody');
-//     dbTableBoard.forEach((value, i) => {
-//         const tr = document.createElement("tr");
-//         const rowValues = [
-//             i, //data-index 역할
-//             dbTableBoard[i].title,
-//             dbTableBoard[i].userId,
-//             // dbTableBoard[i].content, //상세내용은 상세페이지에서 textarea로 확인하겠습니다.
-//             dbTableBoard[i].regiDate
-//         ]
-//         rowValues.forEach((rowValue,j) => {
-//             const td = document.createElement("td");
-//             if(j === 1){ //제목
-//                 const aTag = document.createElement("a");
-//                 aTag.innerText = rowValue;
-//                 aTag.setAttribute("href",`./view.html?appKind=detail&userId=${value.userId}&index=${i}`);
-//                 td.appendChild(aTag);
-//             }else{
-//                 td.innerText = rowValue;
-//             }
-//             tr.appendChild(td);
-//         });
-//         tbody.appendChild(tr);
-//     });
-// }
-
 function createPagination() {
     const dbTableBoard = JSON.parse(localStorage.getItem("dbTableBoard")) || [];
     const totalPages = Math.ceil(dbTableBoard.length / 10);
@@ -108,5 +75,21 @@ function goCreate(){
     location.href="./view.html?appKind=new";
 };
 
-createPagination() ; //페이징 
+// 현재 로그인한 사용자 정보 표시
+function displayLoggedInUser() {
+    const loginData = JSON.parse(localStorage.getItem('loginUserData'));
+    const userInfoDiv = document.querySelector('.user-info');
+
+    if (loginData) {
+        userInfoDiv.innerHTML = `<p>${loginData.userId}님, 환영합니다!</p><p>최근 로그인 : ${loginData.loggedInAt}</p>`;
+    } else {
+        //userInfoDiv.innerText = '로그인 정보가 없습니다.';
+        //2025.09.08 예외처리 : 로그인정보가 없으면 로그인 페이지로 돌려보냄
+        alert("로그인 정보가 없습니다.");
+        location.href="./index.html";
+        return;
+    }
+}
+displayLoggedInUser(); //현재 로그인한 사용자 정보 표시
+createPagination(); //페이징 
 getList(1); //최초 접근 시 첫페이지 호출

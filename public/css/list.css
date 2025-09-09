@@ -7,7 +7,6 @@
     min-width: 500px;
     margin: auto;    
 }
-
 #header > h1{
     padding: 20px 0;
     text-align: center;
@@ -49,7 +48,6 @@
 #header > .button-area > .paging {
     display: flex; /* 버튼을 가로로 정렬 */    
     gap: 8px; /* 버튼 사이의 간격 */
-	
 }
 
 #header > .button-area > .btn-create {
@@ -60,22 +58,11 @@
     background-color: #110158;
     font-weight: 500;
     color: white;
-    
 }
-/*
-.page-btn {
-    padding: 10px 15px;
-    margin: 0 5px;
-    border: 1px solid #373737;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #373737;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* 0.3초간 부드럽게 변화 */
+.user-info {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 14px;
+    margin: 10px 10px;
 }
-
-.page-btn.active, .page-btn:hover {
-    background-color: #373737;
-    color: #fff;
-}
-*/
