@@ -69,7 +69,7 @@ function saveBoard(e){
         title       : title.value,
         content     : content.value,
         regiDate    : getToday(),
-        uniquekey   : uniquekey
+        key   : uniquekey
         
     }
     
