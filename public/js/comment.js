@@ -2,6 +2,12 @@ const mentAreaForm = document.querySelector(".mentArea-form");
 
 const mentsCreate = (e) => {
     e.preventDefault();
+    //댓글 내용이 비어있을 경우 입력을 막는 창
+    const inputCt = mentAreaForm.querySelector("input[name='mentContent']");
+    if (inputCt.value.length <= 0) {
+        alert("댓글 내용을 입력하시길 바랍니다.")
+        return;
+    }
     const {mentUserId, mentContent} = e.target;
 
     const dbTableBoards = JSON.parse(localStorage.getItem("dbTableBoard")) || [];
