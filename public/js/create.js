@@ -26,6 +26,9 @@ function initLayout(){
     btnUpdateMode.style.display = 'none';
     const btnDelete = document.querySelector("button[value='del']");
     btnDelete.style.display = 'none';
+    // 댓글 영역 숨김처리
+    const mentArea = document.querySelector(".mentArea");
+    mentArea.style.display = `none`;
 }
 
 //오늘날짜를 return 하는 함수
@@ -36,6 +39,9 @@ function getToday(){
     const day = String(today.getDate()).padStart(2, '0');       // padStart는 오라클의 LPAD함수와 같음
     return `${year}-${month}-${day}`;
 }
+
+
+
 
 //DB저장
 function saveBoard(e){
@@ -60,11 +66,16 @@ function saveBoard(e){
         return;
     }
     
+    // 글의 유니크 키를 만들어주는 선언
+    const uniquekey =  Date.now();
+
     const createRowData = {
         userId      : userId.value,
         title       : title.value,
         content     : content.value,
-        regiDate    : getToday()
+        regiDate    : getToday(),
+        uniquekey   : uniquekey
+        
     }
     
     //Transaction : localStorage를 가져와서 createRowData를 push하고 JSON으로 다시 밀어넣는다.
