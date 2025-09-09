@@ -6,6 +6,8 @@
     <title>6강의실 Q & A</title>
     <link rel="stylesheet" href="./public/css/common.css">
     <link rel="stylesheet" href="./public/css/view.css">
+    <link rel="stylesheet" href="./public/css/reply.css">
+    
 </head>
 <body>
     <div id="header">
@@ -38,28 +40,26 @@
         </form>
         <div class="mentArea">
             <ul class="mentArea-List">
+                <li>
+                   <!-- <p>제목</p> -->
+                   <span>아이디</span> 
+                   <span>내용</span> 
+                </li>
             </ul>
             <form class="mentArea-form">
+                <input type="text" name="mentTitle" placeholder="댓글의 제목을 입력해주세요.">
                 <input type="text" name="mentUserId" placeholder="아이디를 입력해주세요">
                 <input type="text" name="mentContent" placeholder="댓글의 내용을 입력해주세요">
                 <button type="submit">댓글 등록</button>
             </form>
         </div>
     </div>
-<<<<<<< HEAD
     <script src="./public/js/comment.js"></script>
     <script src="./public/js/mentRead.js"></script>
     <script src="./public/js/delete.js"></script>
     <script src="./public/js/update.js"></script>
     <script src="./public/js/create.js"></script>
     <script src="./public/js/detail.js"></script>
-=======
->>>>>>> main
-    
-    <script src="./public/js/delete.js"></script> 
-    <script src="./public/js/update.js"></script> 
-    <script src="./public/js/detail.js"></script> <!-- 순서주의 : detail 에서 delete, update 함수 호출 -->
-    <script src="./public/js/create.js"></script>
 </body>
 
 </html>

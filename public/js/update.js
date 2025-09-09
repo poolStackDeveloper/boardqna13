@@ -1,13 +1,8 @@
-// [DB table(dbTableBoard) - board - column]
-// 1. userId  
-// 2. title   
-// 3. content 
-// 4. regiDate
-
-//전역변수 선언 from(detail.js) : (순서상 먼저 거쳐오므로 = 리스트 -> 상세 -> 수정)
-// const inputUserId = document.querySelector("input[name='userId']");
-// const inputTitle = document.querySelector("input[name='title']");
-// const inputContent = document.querySelector("textarea[name='content']");
+//상세화면 전역변수 - create.js, update.js 사용가능
+const inputUserId = document.querySelector("input[name='userId']");
+const inputTitle = document.querySelector("input[name='title']");
+const inputContent = document.querySelector("textarea[name='content']");
+const dbTableBoard = JSON.parse(localStorage.getItem("dbTableBoard")) || [];
 
 function saveModify(){
     const request = new URLSearchParams(location.search);

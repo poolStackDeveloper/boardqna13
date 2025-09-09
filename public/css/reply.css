@@ -1,0 +1,99 @@
+/* 댓글 영역 전체 스타일 */
+.mentArea {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 댓글 목록 스타일 */
+.mentArea > .mentArea-List {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  border-top: 2px solid #eee;
+}
+
+.mentArea > .mentArea-List > li {
+  padding: 18px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  transition: background-color 0.2s;
+}
+
+.mentArea > .mentArea-List > li:hover {
+  background-color: #fafafa;
+}
+
+.mentArea > .mentArea-List > li:last-child {
+  border-bottom: none;
+}
+
+/* 댓글 내용 */
+.mentArea > .mentArea-List p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.mentArea > .mentArea-List p:first-of-type {
+  font-weight: bold;
+  color: #222;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* 댓글 폼 스타일 */
+.mentArea > .mentArea-form {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 5px; */
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+/* 댓글버튼 기본 스타일 */
+.mentArea > .mentArea-form input { 
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 13px;
+  transition: border-color 0.2s;
+}
+
+/* 삭제예정 */
+.mentArea > .mentArea-form input[name="mentTitle"] {
+    display: none;
+}
+
+.mentArea > .mentArea-form input[name="mentUserId"] {
+    width:12%;
+}
+
+.mentArea > .mentArea-form input[name="mentContent"] {
+  width:70%;
+}
+
+.mentArea > .mentArea-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.mentArea > .mentArea-form input::placeholder {
+  color: #b0b0b0;
+}
+
+/* 댓글 등록 버튼 */
+.mentArea > .mentArea-form button {
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background-color: #110158;
+    font-weight: 500;
+    color: white;
+}
