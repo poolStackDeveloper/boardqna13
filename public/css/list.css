@@ -64,9 +64,9 @@
 .user-info {
     position:absolute;
     top: 0px;
-    right: 0px;
-    font-size: 12px;
-    margin-right: 5px;
+    left: 4px;
+    font-size: 14px;
+    color: #454545;
 }
 
 /* 버튼 기본CSS */

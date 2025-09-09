@@ -81,9 +81,11 @@ function displayLoggedInUser() {
     const userInfoDiv = document.querySelector('.user-info');
 
     if (loginData) {
-        userInfoDiv.innerText = `Logged User: ${loginData.userId} / Logged In At: ${loginData.loggedInAt}`;
+        userInfoDiv.innerHTML = `${loginData.userId} 님 환영합니다!<br>로그인 시간: ${loginData.loggedInAt}`;
     } else {
         userInfoDiv.innerText = '로그인 정보가 없습니다.';
+        location.href = "./index.html"; //로그인 페이지로 이동
+        return;
     }
 }
 displayLoggedInUser(); //현재 로그인한 사용자 정보 표시
