@@ -20,7 +20,6 @@ const mentRead = () => {
             const commentCt = document.createElement("p");
             commentCt.textContent = `${replyDate[i].mentContent}`;
             
- 
             if (loginUserId === replyDate[i].mentUserId) {
 
                 const commentDB = document.createElement("button");
@@ -29,17 +28,16 @@ const mentRead = () => {
 
                 const commentUP = document.createElement("button");
                 commentUP.setAttribute("class", "update-btn");
-                commentUP.setAttribute("onclick", "updateBtn()");
-                commentUP.setAttribute("type", "button");
                 commentUP.textContent = `수정`;
+
                 mentAreaList.appendChild(commentLi);
                 commentLi.append(commentId,commentCt,commentDB,commentUP);
-            }else{
+            } else {
                 mentAreaList.appendChild(commentLi);
                 commentLi.append(commentId,commentCt);
-            }
+                }
 
-            }
+        }
     }
 }
 
