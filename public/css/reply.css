@@ -12,7 +12,7 @@
   list-style: none;
   padding: 0;
   margin: 0 0 25px 0;
-  border-top: 2px solid #eee;
+  border-top: 1px solid #eee;
 }
 
 .mentArea > .mentArea-List > li {
@@ -43,7 +43,6 @@
   font-weight: bold;
   color: #222;
   font-size: 16px;
-  /* margin-bottom: 5px; */
   width:110px;
 }
 
@@ -57,9 +56,6 @@
 
 .mentArea-List > .commentlist > .delete-btn{
   width: 50px;
-  position: relative;
-  margin-left: auto;
-  right: 0px;
   background-color: #ff4d4f;
   color: white;
   font-size: 12px;
@@ -67,19 +63,12 @@
 
 .mentArea-List > .commentlist > .update-btn{
   width:50px;
-  position: relative;
-  right: 0px;
-  
-  border: none;
   background-color: #40008d;
   color: white;
-  border-radius: 3px;
-  cursor: pointer;
   font-size: 12px;
-  transition: background-color 0.2s;
 }
 
-/* 댓글 폼 스타일 */
+/* 댓글 입력폼 스타일 */
 .mentArea > .mentArea-form {
   display: flex;
   justify-content: space-between;
@@ -91,18 +80,12 @@
   margin-bottom: 10px;
 }
 
-/* 댓글버튼 기본 스타일 */
+/* 댓글 입력폼 버튼 기본 스타일 */
 .mentArea > .mentArea-form input { 
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 2px;
   font-size: 13px;
-  transition: border-color 0.2s;
-}
-
-/* 삭제예정 */
-.mentArea > .mentArea-form input[name="mentTitle"] {
-    display: none;
 }
 
 .mentArea > .mentArea-form input[name="mentUserId"] {
@@ -111,11 +94,6 @@
 
 .mentArea > .mentArea-form input[name="mentContent"] {
   width:70%;
-}
-
-.mentArea > .mentArea-form input:focus {
-  border-color: #007bff;
-  outline: none;
 }
 
 .mentArea > .mentArea-form input::placeholder {
