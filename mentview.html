@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6강의실 Q & A</title>
+    <link rel="stylesheet" href="./public/css/common.css">
+    <link rel="stylesheet" href="./public/css/mentview.css">
 </head>
 <body>
     <div id="comment">
         <h1>Q & A - 댓글수정</h1>
-        <p>아이디</p>
-        <input type="text" name="mentUserId">
-        <p>내용</p> 
-        <input type="text" name="mentContent" maxlength="60">
         <form class="comment-btn">
-            <button type="submit">수정완료</button>
-            <button onclick="backBtn()" type="button">뒤로가기</button>
+
+            <div class="comment-input">
+                <label class="ment-id" for="mentUserId">사용자 ID</label>
+                <input type="text" name="mentUserId">
+            </div>
+
+            <div class="comment-input">
+                <label class="ment-ct" for="mentContent">댓글 내용</label>
+                <input type="text" name="mentContent" maxlength="60" placeholder="댓글의 내용은 60자 이내로만 수정 가능합니다.">
+            </div>
+
+            <div class="button">
+                <button onclick="backBtn()" type="button">뒤로가기</button>
+                <button type="submit">수정완료</button>
+            </div>
         </form>
     </div>
     <script src="./public/js/mentView.js"></script>

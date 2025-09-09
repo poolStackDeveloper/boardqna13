@@ -1,0 +1,78 @@
+#comment {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    height: 100vh; 
+    margin: auto;   
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#comment > h1 {
+    padding: 20px 0;
+    text-align: center;
+}
+#comment > .comment-btn > .comment-input {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 3px;
+}
+
+.comment-btn > .comment-input >.ment-id, .ment-ct{
+    display: inline-block;
+    height: 30px;
+    color : white;
+    font-weight: 500;
+    text-align: center;
+    width : 150px;
+    background-color: #313131;
+}
+
+#comment > .comment-btn > .comment-input > input {
+    height: 26px;
+    width : 79%;
+    outline: none;
+    padding: 0 0 0 5px;
+}
+
+
+#comment > .comment-btn > .button {
+    margin: 15px 0;
+    width: 99.5%;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+#comment > .comment-btn > .button > button:nth-child(2) {
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background-color: #40008d;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+#comment > .comment-btn > .button > button:nth-child(1) {
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background-color: #393939;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+
+
+
+
+
+
