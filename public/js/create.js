@@ -74,8 +74,7 @@ function saveBoard(e){
         title       : title.value,
         content     : content.value,
         regiDate    : getToday(),
-        uniquekey   : uniquekey
-        
+        key     : uniquekey
     }
     
     //Transaction : localStorage를 가져와서 createRowData를 push하고 JSON으로 다시 밀어넣는다.
