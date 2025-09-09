@@ -10,10 +10,10 @@ const mentsCreate = (e) => {
         mentContent: mentContent.value
     }
 
-    const comments = JSON.parse(localStorage.getItem("replyData")) || [];
-    comments.push(commemt);
+    const replyData = JSON.parse(localStorage.getItem("replyData")) || [];
+    replyData.push(commemt);
     
-    localStorage.setItem("replyData", JSON.stringify(comments));
+    localStorage.setItem("replyData", JSON.stringify(replyData));
 }
 
 mentAreaForm.addEventListener("submit",mentsCreate);
