@@ -6,7 +6,7 @@ const reply = replyData[index];
 const commentBtn = document.querySelector(".comment-btn");
 const comment = document.querySelector("#comment");
 const inputId = comment.querySelector("input[name='mentUserId']");
-const inputComment = comment.querySelector("textarea[name='mentContent']");
+const inputComment = comment.querySelector("input[name='mentContent']");
 
 
 inputId.value = reply.mentUserId;

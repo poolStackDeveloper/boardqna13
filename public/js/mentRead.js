@@ -4,15 +4,16 @@ const mentRead = () => {
     const replyDate = JSON.parse(localStorage.getItem("replyData")) || [];
     const request = new URLSearchParams(location.search);
     const key = Number(request.get("uniquekey"));
+    
     //유저의 로그인 정보를 가져오게끔 처리
     const loginData = JSON.parse(localStorage.getItem('loginUserData'));
     const loginUserId = loginData.userId;
     
     //댓글 입력시에 자동으로 로그인된 유저아이디로만 작성할 수 있도록 disabled처리
     const mentAreaForm = document.querySelector(".mentArea-form");
-    const inputid = mentAreaForm.querySelector("input[name='mentUserId']");
-    inputid.value = loginUserId;
-    inputid.setAttribute("disabled", "");
+    const inputId = mentAreaForm.querySelector("input[name='mentUserId']");
+    inputId.value = loginUserId;
+    inputId.setAttribute("disabled", "");
 
     for (let i = 0; i < replyDate.length; i++) {
         if (key === replyDate[i].parentId) {
