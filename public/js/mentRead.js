@@ -40,7 +40,7 @@ const mentRead = () => {
                 commentUP.textContent = `수정`;
 
                 mentAreaList.appendChild(commentLi);
-                commentLi.append(commentId,commentCt,commentDB,commentUP);
+                commentLi.append(commentId,commentCt,commentUP,commentDB);
             } else {
                 mentAreaList.appendChild(commentLi);
                 commentLi.append(commentId,commentCt);

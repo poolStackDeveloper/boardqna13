@@ -1,0 +1,71 @@
+#comment {
+    display: flex;
+    flex-direction:column;
+    justify-content: center; 
+    height: 100vh; 
+    margin: auto;   
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#comment > h1 {
+    padding: 20px 0;
+    text-align: center;
+}
+
+#comment > .comment-btn > p {
+    width : 20%;
+    color : white;
+    background-color: #313131;
+    height: 30px;
+    text-align: center;
+}
+
+#comment > .comment-btn > input {
+    display: inline-block;
+    height: 30px;
+    width : 100%;
+    margin: 5px 0 5px 0;
+    outline: none;
+    padding: 0 0 0 5px;
+}
+
+#comment > .comment-btn > .button {
+    width: 101%;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+#comment > .comment-btn > .button > button:nth-child(1) {
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background-color: #40008d;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+#comment > .comment-btn > .button > button:nth-child(2) {
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background-color: #393939;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+
+
+
+
+
+
