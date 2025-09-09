@@ -1,8 +1,13 @@
+body {
+    display: flex; 
+    min-height: 100vh; /* #header에서 적용 시, 게시물이 늘어나면서 스크롤바 없이 윗부분이 잘림 */
+  }
+
 #header{
     display: flex;
     flex-direction:column;
     justify-content: center; 
-    height: 100vh; 
+    /* height: 100vh;  */
     margin: auto;   
     max-width: 1000px;
     min-width: 500px;
