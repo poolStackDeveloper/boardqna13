@@ -36,6 +36,7 @@
   font-size: 15px;
   line-height: 1.5;
   color: #444;
+  width: 80%;
 }
 
 .mentArea > .mentArea-List p:first-of-type {
@@ -43,11 +44,11 @@
   color: #222;
   font-size: 16px;
   /* margin-bottom: 5px; */
+  width:110px;
 }
 
 .mentArea > .mentArea-List > .commentlist {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
   margin-right: auto;
@@ -55,7 +56,7 @@
 }
 
 .mentArea-List > .commentlist > .delete-btn{
-  width: 80px;
+  width: 50px;
   position: relative;
   margin-left: auto;
   right: 0px;
@@ -65,7 +66,7 @@
 }
 
 .mentArea-List > .commentlist > .update-btn{
-  width:80px;
+  width:50px;
   position: relative;
   right: 0px;
   
