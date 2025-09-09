@@ -9,7 +9,7 @@ const mentRead = () => {
         if (key === replyDate[i].parentId) {
             const commentLi = document.createElement("li");
             commentLi.setAttribute("class", "commentlist")
-            commentLi.setAttribute("data-key", replyDate[i].parentId);
+            commentLi.setAttribute("data-key", replyDate[i].replyId);
 
             const commentId = document.createElement("p");
             commentId.textContent = `${replyDate[i].mentUserId}`
