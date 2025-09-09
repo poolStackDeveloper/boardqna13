@@ -3,9 +3,11 @@
     flex-direction:column;
     justify-content: center;
     height: 100vh;
+
     margin: auto;   
     max-width: 800px;
     margin: 0 auto;
+    
 }
 
 #comment > h1 {
