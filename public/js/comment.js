@@ -15,8 +15,8 @@ const mentsCreate = (e) => {
     const commemt = {
         mentUserId: mentUserId.value,
         mentContent: mentContent.value,
-        dbkey: dbTableKey,
-        cmKey: commentkey
+        parentId: dbTableKey,
+        replyId: commentkey
     }
 
     const replyData = JSON.parse(localStorage.getItem("replyData")) || [];

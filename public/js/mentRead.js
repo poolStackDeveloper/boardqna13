@@ -6,10 +6,10 @@ const mentRead = () => {
     const key = Number(request.get("uniquekey"));
     
     for (let i = 0; i < replyDate.length; i++) {
-        if (key === replyDate[i].dbkey) {
+        if (key === replyDate[i].parentId) {
             const commentLi = document.createElement("li");
             commentLi.setAttribute("class", "commentlist")
-            commentLi.setAttribute("data-key", replyDate[i].dbkey);
+            commentLi.setAttribute("data-key", replyDate[i].parentId);
 
             const commentId = document.createElement("p");
             commentId.textContent = `${replyDate[i].mentUserId}`
