@@ -27,7 +27,7 @@ const updateBtn = (e) => {
 commentBtn.addEventListener("submit", updateBtn);
 
 const backBtn = () => {
-    const cheakConfirm = confirm(`이전 페이지로 가실 경우 작성하신 정보는 사라집니다. 뒤로 가시겠습니까?`)
+    const cheakConfirm = confirm(`이전 페이지로 가실 경우 작성하신 정보는 사라집니다.\n뒤로 가시겠습니까?`)
     if(!cheakConfirm) {return};
     window.history.back();
 }
