@@ -7,7 +7,7 @@ const mentsCreate = (e) => {
     const dbTableBoards = JSON.parse(localStorage.getItem("dbTableBoard")) || [];
     const request = new URLSearchParams(location.search);
     const index = request.get("index");
-    const dbTableKey = dbTableBoards[index].key;
+    const dbTableKey = dbTableBoards[index].parentId;
     
     //댓글의 유니크키 선언
     const commentkey =  Date.now();
@@ -22,6 +22,8 @@ const mentsCreate = (e) => {
     replyData.push(commemt);
     
     localStorage.setItem("replyData", JSON.stringify(replyData));
+
+    window.location.href = `./view.html?appKind=detail&userId=${dbTableBoards[index].userId}&index=${index}&uniquekey=${dbTableBoards[index].parentId}`
 }
 
 mentAreaForm.addEventListener("submit",mentsCreate);

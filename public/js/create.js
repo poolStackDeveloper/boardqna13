@@ -62,7 +62,7 @@ function saveBoard(e){
         return;
     }
     if(content.value.length < 10){
-        alert("내용은 10자 이상 입력하세요");
+
         return;
     }
     
@@ -74,7 +74,8 @@ function saveBoard(e){
         title       : title.value,
         content     : content.value,
         regiDate    : getToday(),
-        key     : uniquekey
+        parentId    : uniquekey
+        
     }
     
     //Transaction : localStorage를 가져와서 createRowData를 push하고 JSON으로 다시 밀어넣는다.

@@ -52,7 +52,7 @@ function getList(numPage) {
         const tdTitle = document.createElement("td");
         const aTag = document.createElement("a");
         aTag.innerText = value.title;
-        aTag.setAttribute("href", `./view.html?appKind=detail&userId=${value.userId}&index=${i}&uniquekey=${value.key}`);
+        aTag.setAttribute("href", `./view.html?appKind=detail&userId=${value.userId}&index=${i}&uniquekey=${value.parentId}`);
         tdTitle.appendChild(aTag);
         tr.appendChild(tdTitle);
 
