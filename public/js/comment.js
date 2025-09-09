@@ -22,6 +22,8 @@ const mentsCreate = (e) => {
     replyData.push(commemt);
     
     localStorage.setItem("replyData", JSON.stringify(replyData));
+
+    window.location.href = `./view.html?appKind=detail&userId=${dbTableBoards[index].userId}&index=${index}&uniquekey=${dbTableBoards[index].parentId}`
 }
 
 mentAreaForm.addEventListener("submit",mentsCreate);
