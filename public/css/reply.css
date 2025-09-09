@@ -42,7 +42,40 @@
   font-weight: bold;
   color: #222;
   font-size: 16px;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
+}
+
+.mentArea > .mentArea-List > .commentlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-right: auto;
+  gap: 10px;
+}
+
+.mentArea-List > .commentlist > .delete-btn{
+  width: 80px;
+  position: relative;
+  margin-left: auto;
+  right: 0px;
+  background-color: #ff4d4f;
+  color: white;
+  font-size: 12px;
+}
+
+.mentArea-List > .commentlist > .update-btn{
+  width:80px;
+  position: relative;
+  right: 0px;
+  
+  border: none;
+  background-color: #40008d;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
 }
 
 /* 댓글 폼 스타일 */
