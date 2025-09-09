@@ -6,7 +6,7 @@ const reply = replyData[index];
 const commentBtn = document.querySelector(".comment-btn");
 const comment = document.querySelector("#comment");
 const inputId = comment.querySelector("input[name='mentUserId']");
-const inputComment = comment.querySelector("textarea[name='mentContent']");
+const inputComment = comment.querySelector("input[name='mentContent']");
 
 
 inputId.value = reply.mentUserId;
@@ -27,7 +27,7 @@ const updateBtn = (e) => {
 commentBtn.addEventListener("submit", updateBtn);
 
 const backBtn = () => {
-    const cheakConfirm = confirm(`이전 페이지로 가실 경우 작성하신 정보는 사라집니다. 뒤로 가시겠습니까?`)
+    const cheakConfirm = confirm(`이전 페이지로 가실 경우 작성하신 정보는 사라집니다.\n뒤로 가시겠습니까?`)
     if(!cheakConfirm) {return};
     window.history.back();
 }
