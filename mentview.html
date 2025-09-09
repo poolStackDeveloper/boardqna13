@@ -11,13 +11,20 @@
     <div id="comment">
         <h1>Q & A - 댓글수정</h1>
         <form class="comment-btn">
-            <p>사용자 ID</p>
-            <input type="text" name="mentUserId">
-            <p>댓글 내용</p> 
-            <input type="text" name="mentContent" maxlength="60" placeholder="댓글의 내용은 60자 이내로만 수정 가능합니다.">
+
+            <div class="comment-input">
+                <label class="ment-id" for="mentUserId">사용자 ID</label>
+                <input type="text" name="mentUserId">
+            </div>
+
+            <div class="comment-input">
+                <label class="ment-ct" for="mentContent">댓글 내용</label>
+                <input type="text" name="mentContent" maxlength="60" placeholder="댓글의 내용은 60자 이내로만 수정 가능합니다.">
+            </div>
+
             <div class="button">
-            <button type="submit">수정완료</button>
-            <button onclick="backBtn()" type="button">뒤로가기</button>
+                <button onclick="backBtn()" type="button">뒤로가기</button>
+                <button type="submit">수정완료</button>
             </div>
         </form>
     </div>
