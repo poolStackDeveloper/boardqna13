@@ -11,7 +11,6 @@ const mentsCreate = (e) => {
     
     //댓글의 유니크키 선언
     const commentkey =  Date.now();
-
     const commemt = {
         mentUserId: mentUserId.value,
         mentContent: mentContent.value,

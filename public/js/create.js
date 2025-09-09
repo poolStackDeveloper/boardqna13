@@ -7,11 +7,15 @@ function initLayout(){
     const title = document.querySelector("h1");
     title.innerHTML = "Q & A - 신규등록";
 
-    //Get Login User info
+    // 250908 Get Login User info
     const loginData = JSON.parse(localStorage.getItem('loginUserData'));
     if (loginData) {
         inputUserId.value = `${loginData.userId}`;
         inputUserId.setAttribute('disabled', 'true'); //아이디는 더 이상 게시물 등록 항목이 아님
+    }else{
+        alert("로그인 정보가 없습니다.");
+        location.href="./index.html";
+        return;
     }
 
     //수정버튼 숨김처리
@@ -70,8 +74,12 @@ function saveBoard(e){
         title       : title.value,
         content     : content.value,
         regiDate    : getToday(),
+<<<<<<< HEAD
         parentId    : uniquekey
         
+=======
+        key     : uniquekey
+>>>>>>> ae53aee1b9b4a05828fb8351151afaa5dcda0aff
     }
     
     //Transaction : localStorage를 가져와서 createRowData를 push하고 JSON으로 다시 밀어넣는다.

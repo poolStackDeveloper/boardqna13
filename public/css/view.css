@@ -38,13 +38,18 @@
      
 }
 #header > .formCreate > .btnArea-right{
-    /* display: flex; */
-    /* align-items: flex-end; */
-    /* margin-left: auto; */
     width: 50%;
     padding-top: 30px; 
-    
-    
+}
+
+/* 버튼 기본CSS */
+button { 
+    width: 100%;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .btnArea > .btnArea-left > .btnGoBack{
@@ -106,12 +111,5 @@
     width : 100%;
 }
 
-/* 버튼 기본CSS */
-button { 
-    width: 100%;
-    padding: 0.4rem;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-}
+
+
