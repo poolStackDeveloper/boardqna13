@@ -47,15 +47,15 @@ function getList(numPage) {
         const tdIndex = document.createElement("td");
         tdIndex.innerText = i + 1; //화면 표시는 0이 아닌 1로 시작하도록 
         tr.appendChild(tdIndex);
-        
+
         //한 게시글의 몇개의 글자가 있는지 표현해줌
         const replyData = JSON.parse(localStorage.getItem("replyData")) || [];
-        const count = replyData.filter(item => item.parentId === value.parentId).length;
+        const replyCount = replyData.filter(item => item.parentId === value.parentId).length;
 
         // td-2 : title (with href)
         const tdTitle = document.createElement("td");
         const aTag = document.createElement("a");
-        aTag.innerText = `${value.title} [${count}]` ;
+        aTag.innerText = `${value.title} [${replyCount}]` ;
         aTag.setAttribute("href", `./view.html?appKind=detail&userId=${value.userId}&index=${i}&uniquekey=${value.parentId}`);
         tdTitle.appendChild(aTag);
         tr.appendChild(tdTitle);
