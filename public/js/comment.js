@@ -7,7 +7,7 @@ const mentsCreate = (e) => {
     const dbTableBoards = JSON.parse(localStorage.getItem("dbTableBoard")) || [];
     const request = new URLSearchParams(location.search);
     const index = request.get("index");
-    const dbTableKey = dbTableBoards[index].key;
+    const dbTableKey = dbTableBoards[index].parentId;
     
     //댓글의 유니크키 선언
     const commentkey =  Date.now();

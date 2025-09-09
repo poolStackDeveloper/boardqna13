@@ -15,10 +15,20 @@ const mentRead = () => {
             commentId.textContent = `${replyDate[i].mentUserId}`
 
             const commentCt = document.createElement("p");
-            commentCt.textContent = `${replyDate[i].mentContent}`
+            commentCt.textContent = `${replyDate[i].mentContent}`;
+
+            const commentDB = document.createElement("button");
+            commentDB.setAttribute("class", "delete-btn");
+            commentDB.setAttribute("onclick" , "deleteBtn()");
+            commentDB.textContent = `삭제`;
+
+            const commentUP = document.createElement("button");
+            commentUP.setAttribute("class", "update-btn");
+            commentUP.setAttribute("onclick", "updateBtn()");
+            commentUP.textContent = `수정`;
 
             mentAreaList.appendChild(commentLi);
-            commentLi.append(commentId,commentCt);
+            commentLi.append(commentId,commentCt,commentDB,commentUP);
             }
     }
 }
