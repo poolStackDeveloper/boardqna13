@@ -2,23 +2,25 @@
     display: flex;
     flex-direction:column;
     justify-content: center;
-    height: 100vh; 
+    height: 100vh;
+
     margin: auto;   
     max-width: 800px;
     margin: 0 auto;
+    
 }
 
 #comment > h1 {
     padding: 20px 0;
     text-align: center;
 }
-#comment > .comment-btn > .comment-input {
+#comment > .comment-update > .comment-update-input {
     display: flex;
     gap: 3px;
     margin-bottom: 3px;
 }
 
-.comment-btn > .comment-input >.ment-id, .ment-ct{
+.comment-update > .comment-update-input >.ment-id, .ment-ct{
     display: inline-block;
     height: 30px;
     color : white;
@@ -28,7 +30,7 @@
     background-color: #313131;
 }
 
-#comment > .comment-btn > .comment-input > input {
+#comment > .comment-update > .comment-update-input > input {
     height: 26px;
     width : 79%;
     outline: none;
@@ -36,7 +38,7 @@
 }
 
 
-#comment > .comment-btn > .button {
+#comment > .comment-update > .comment-update-button {
     margin: 15px 0;
     width: 99.5%;
     font-weight: 600;
@@ -46,7 +48,7 @@
     align-items: center;
 }
 
-#comment > .comment-btn > .button > button:nth-child(2) {
+#comment > .comment-update > .comment-update-button > button:nth-child(2) {
     width: 100px;
     height: 30px;
     border: 0;
@@ -58,7 +60,7 @@
     border: none;
 }
 
-#comment > .comment-btn > .button > button:nth-child(1) {
+#comment > .comment-update > .comment-update-button > button:nth-child(1) {
     width: 100px;
     height: 30px;
     border: 0;
