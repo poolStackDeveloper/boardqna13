@@ -62,7 +62,7 @@ function saveBoard(e){
         return;
     }
     if(content.value.length < 10){
-
+        alert("내용은 10자 이상 입력하세요");
         return;
     }
     
