@@ -55,7 +55,10 @@ function getList(numPage) {
         // td-2 : title (with href)
         const tdTitle = document.createElement("td");
         const aTag = document.createElement("a");
-        aTag.innerText = `${value.title} [${replyCount}]` ;
+        if(replyCount == 0 ) {
+            aTag.innerText = `${value.title}`
+        } else aTag.innerText = `${value.title} [${replyCount}]` ;
+        
         aTag.setAttribute("href", `./view.html?appKind=detail&userId=${value.userId}&index=${i}&uniquekey=${value.parentId}`);
         tdTitle.appendChild(aTag);
         tr.appendChild(tdTitle);
