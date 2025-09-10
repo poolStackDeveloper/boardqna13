@@ -57,7 +57,7 @@ function getList(numPage) {
         const aTag = document.createElement("a");
         if(replyCount == 0 ) {
             aTag.innerText = `${value.title}`
-        } else aTag.innerText = `${value.title} [${replyCount}]` ;
+        } else aTag.innerHTML = `${value.title}<b>[${replyCount}]</b>` ;
         
         aTag.setAttribute("href", `./view.html?appKind=detail&userId=${value.userId}&index=${i}&uniquekey=${value.parentId}`);
         tdTitle.appendChild(aTag);
