@@ -18,6 +18,18 @@ function initLayout(){
     inputTitle.readOnly = true;
     inputContent.readOnly = true;
 
+    //로그인 정보가 다를 경우
+    const loginData = JSON.parse(localStorage.getItem('loginUserData'));
+    const loginUserId = loginData.userId;
+
+    if (loginUserId !== dbTableBoard[index].userId) {
+        const btnDelete = document.querySelector(".btnDelete");
+        const btnUpdate = document.querySelector(".btnUpdate");
+        btnDelete.style.display = `none`;
+        btnUpdate.style.display = `none`;
+
+        }
+
     //상세조회 화면 : 등록버튼, 저장(수정)버튼,  숨김처리
     const btnSave = document.querySelector("button[value='save']");
     btnSave.style.display = 'none';
