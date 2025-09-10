@@ -29,8 +29,6 @@ const updateBtn = (e) => {
     localStorage.setItem("replyData", JSON.stringify(replyData));
     alert("수정이 완료 되었습니다.")
     window.history.back();
-    window.location.reload();
-    alert("확인");
 }
 
 commentUpdate.addEventListener("submit", updateBtn);
