@@ -1,9 +1,3 @@
-// [DB table(dbTableBoard) - board - column]
-// 1. userId  
-// 2. title   
-// 3. content 
-// 4. regiDate
-
 function createPagination() {
     const dbTableBoard = JSON.parse(localStorage.getItem("dbTableBoard")) || [];
     const totalPages = Math.ceil(dbTableBoard.length / 10);
