@@ -55,10 +55,12 @@ function getList(numPage) {
         // td-2 : title (with href)
         const tdTitle = document.createElement("td");
         const aTag = document.createElement("a");
+
+        // 댓글이 없는 게시글은 댓글 갯수를 포함하지 않음
         if(replyCount == 0 ) {
             aTag.innerText = `${value.title}`
         } else aTag.innerText = `${value.title} [${replyCount}]` ;
-        
+
         aTag.setAttribute("href", `./view.html?appKind=detail&userId=${value.userId}&index=${i}&uniquekey=${value.parentId}`);
         tdTitle.appendChild(aTag);
         tr.appendChild(tdTitle);
