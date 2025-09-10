@@ -28,7 +28,7 @@ const updateBtn = (e) => {
     replyData[index].mentContent = inputComment.value;
     localStorage.setItem("replyData", JSON.stringify(replyData));
     alert("수정이 완료 되었습니다.")
-    window.history.back();
+    location.href = document.referrer;
 }
 
 commentUpdate.addEventListener("submit", updateBtn);
