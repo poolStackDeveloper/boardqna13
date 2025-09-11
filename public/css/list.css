@@ -7,6 +7,15 @@
     min-width: 500px;
     margin: auto;    
 }
+
+#header > .user-info {
+    position:absolute;
+    top: 0px;
+    left: 4px;
+    font-size: 14px;
+    color: #454545;
+}
+
 #header > h1{
     padding: 20px 0;
     text-align: center;
@@ -57,7 +66,6 @@
 #header > .button-area > .paging {
     display: flex; /* 버튼을 가로로 정렬 */    
     gap: 8px; /* 버튼 사이의 간격 */
-	
 }
 
 #header > .button-area > .btn-create {
@@ -68,18 +76,10 @@
     background-color: #110158;
     font-weight: 500;
     color: white;
-    
-}
-.user-info {
-    position:absolute;
-    top: 0px;
-    left: 4px;
-    font-size: 14px;
-    color: #454545;
 }
 
 /* 버튼 기본CSS */
-button { 
+#header > .button-area > button { 
     width: 100%;
     padding: 0.4rem;
     border: none;
