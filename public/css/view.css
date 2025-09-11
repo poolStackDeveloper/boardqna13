@@ -48,8 +48,6 @@ body {
     width : 100%;
 }
 
-
-
 #header > .formCreate > .btnArea{
     display: flex; 
     justify-content: space-between; 
@@ -116,6 +114,3 @@ button {
     font-weight: 500;
     color: white;
 }
-
-
-
