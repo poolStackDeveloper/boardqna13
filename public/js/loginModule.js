@@ -61,7 +61,7 @@ function handleLogin(userId, password) {
         localStorage.setItem(LOGIN_DATA_KEY, JSON.stringify(loginData));
 
         alert('로그인 성공!');
-        window.location.href = 'list.html';
+        window.location.href = './list.html';
     } else {
         alert('아이디 또는 비밀번호가 올바르지 않습니다.');
     }
