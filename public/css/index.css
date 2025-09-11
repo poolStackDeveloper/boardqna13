@@ -19,19 +19,19 @@ body {
     text-align: center;
 }
 
-h1 {
+.main h1 {
     margin-bottom: 2rem;
     color: #333;
     font-size: 1.75rem;
     font-weight: 600;
 }
 
-.input-group {
+.main > #auth-form > .input-group {
     margin-bottom: 1.2rem;
     text-align: left;
 }
 
-.input-group label {
+#auth-form > .input-group label {
     display: block;
     margin-bottom: 0.6rem;
     color: #555;
@@ -39,7 +39,7 @@ h1 {
     font-size: 0.9rem;
 }
 
-.input-group input {
+#auth-form > .input-group input {
     width: 100%;
     padding: 0.9rem;
     border: 1px solid #ddd;
@@ -49,7 +49,7 @@ h1 {
     transition: border-color 0.3s ease;
 }
 
-button {
+.main > #auth-form > button {
     width: 100%;
     padding: 0.9rem;
     border: none;
@@ -61,21 +61,21 @@ button {
     transition: background-color 0.3s ease, transform 0.2s ease; /* 부드럽게 스윽 바뀌는 효과 */
 }
 
-#submit-btn {
+.main > #auth-form > #submit-btn {
     background-color: #110158;
     color: #fff;
 }
 
-#submit-btn:hover {
+.main > #auth-form > #submit-btn:hover {
     transform: translateY(-1px);
 }
 
-#toggle-btn {
+.main > #auth-form > #toggle-btn {
     background-color: #6c757d;
     color: #fff;
 }
 
-#toggle-btn:hover {
+.main > #auth-form > #toggle-btn:hover {
     background-color: #5a6268;
     transform: translateY(-1px);
 }
